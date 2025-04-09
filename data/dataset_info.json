@@ -1,0 +1,40 @@
+{
+    "medqa": {
+        "file_name": "train_medqa.json",
+        "columns": {
+        "prompt": "instruction"
+        }
+    },
+    "pubmed": {
+        "file_name": "train_pubmed.json",
+        "columns": {
+        "prompt": "instruction"
+        }
+    },
+    "pubhealth": {
+        "file_name": "train_pubhealth.json",
+        "columns": {
+        "prompt": "instruction"
+        }
+    },
+    "casehold": {
+        "file_name": "train_casehold.json",
+        "columns": {
+        "prompt": "instruction"
+        }
+    },
+    "mmrait": {
+    "file_name": "train_mmrait_true.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }
+}
