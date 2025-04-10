@@ -1,21 +1,17 @@
-<h1 align="center"> RARE: Retrieval-Augmented Reasoning Modeling </h1>
+<h1 align="center"> <img src="image/logo.png" width="38" height="38" alt="">  RARE: Retrieval-Augmented Reasoning Modeling </h1>
 
 <p align="center">
- <a href='https://arxiv.org/abs/2503.23513v1'><img src='https://img.shields.io/badge/arXiv-2503.23513-b31b1b.svg'></a>  
- <a href='https://huggingface.co/datasets/yuhkalhic/rare_share'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-rare-blue'></a>
- <a href="https://opensource.org/license/apache-2-0" target="_blank">
-    <img alt="License: apache-2-0" src="https://img.shields.io/github/license/saltstack/salt" />
-</a>
-<a href="https://github.com/Open-DataFlow/RARE" target="_blank">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/Open-DataFlow/RARE?style=social" />
-</a>
+<a href='https://arxiv.org/abs/2503.23513v1'><img src='https://img.shields.io/badge/arXiv-2503.23513-b31b1b.svg'></a>  
+<a href='https://huggingface.co/datasets/yuhkalhic/rare_share'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-rare-blue'></a>
+<a href="https://opensource.org/license/apache-2-0" target="_blank"><img alt="License: apache-2-0" src="https://img.shields.io/github/license/saltstack/salt"></a>
+<a href="https://github.com/Open-DataFlow/RARE" target="_blank"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Open-DataFlow/RARE?style=social"></a>
 </p>
 
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
 ## 💡 Overview
 
-We propose the **RARE** training framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge . (*Work in Progess*)
+We propose the **RARE** training framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge. At present, we have made available several materials pertinent to the *medical and legal domains, as well as open-domain multi-modal scenarios. (Work in Progress)* 
 
 <table class="center">
     <tr>
@@ -34,7 +30,7 @@ We propose the **RARE** training framework, a novel paradigm that decouples know
     </tr>
     <tr>
         <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
-              A real data sample, which showcases the effectiveness and superiority of RARE.
+              Demonstration of RARE. A real data sample, which showcases the effectiveness and superiority of RARE.
       </td>
     </tr>
 </table>
