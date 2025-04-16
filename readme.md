@@ -35,6 +35,15 @@ We propose the **RARE** training framework, a novel paradigm that decouples know
     </tr>
 </table>
 
+<!-- ## 📣 Latest News -->
+
+## ✏️ TODO List
+- [ ] Static analysis as a preliminary experiment to demonstrate the effectiveness of RARE.
+- [ ] More results on parameter-efficient fine-tuning and data-efficient fine-tuning.
+- [ ] More results on diverse model sizes alongside relevant baselines.
+- [ ] More results on multi-task and cross-task learning.
+- [ ] Developing RARE 2.0 (Stay Tuned!)
+
 ## 🔧 Installation
 
 Complete the environment deployment for this project through the following methods.
@@ -224,12 +233,13 @@ If you find this work helpful, please cite our paper:
 
 ## ❤️ Acknowledgement
 
-This repo benefits from: [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [s1](https://github.com/simplescaling/s1), [Search-o1](https://github.com/sunnynexus/Search-o1). Thanks for wonderful works.
+This repo benefits from: [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [s1](https://github.com/simplescaling/s1). Thanks for wonderful works.
 
 <!-- - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
 - [s1](https://github.com/simplescaling/s1)
 - [Search-o1](https://github.com/sunnynexus/Search-o1) -->
 <!-- Thanks for wonderful works. -->
+<!-- [Search-o1](https://github.com/sunnynexus/Search-o1) -->
 
 ## 📞 Contact
 
