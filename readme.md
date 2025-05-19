@@ -15,7 +15,7 @@ We propose the **RARE** framework, a novel paradigm that decouples knowledge sto
 
 <table class="center">
     <tr>
-        <td width=100% style="border: none"><img src="image/Overview_RARE.pdf" style="width:100%"></td>
+        <td width=100% style="border: none"><img src="image/Overview_RARE.png" style="width:100%"></td>
     </tr>
     <tr>
         <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
