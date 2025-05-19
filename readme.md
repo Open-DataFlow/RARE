@@ -78,7 +78,7 @@ bash demo/qwenvl_mmrait_rare.sh
 
 ## ✨ Main Experiments
 
-### 📋 Data Preparation
+### 📋 Data Preparation <a id="Data-Preparation"></a>
 
 We provide methods for preprocessing data from different sources.
 
@@ -102,6 +102,10 @@ python process/process_pubhealth.py
 ```
 python process/process_casehold.py
 ```
+- process finfact
+```
+python process/process_finfact.py
+```
 - process mmrait
 ```
 huggingface-cli download whalezzz/M2RAG --repo-type dataset --local-dir process --include "fact_verify/*"
@@ -112,10 +116,10 @@ Through the above steps, the construction of prompts and answers for the dataset
 
 2. Distill Reasoning Model
 ```
-# For medqa, pubmed, pubhealth, casehold, these steps should be done
+# For medqa, pubmed, pubhealth, casehold, finfact, these steps should be done
 modelscope download --model Qwen/QwQ-32B --local_dir saves/QwQ-32B
 python inference/vllm_infer_text.py --model_name_or_path saves/QwQ-32B --dataset_path data/train_medqa.json --template qwen
-python process/select_true.py data/train_medqa.json # Only for medqa and casehold
+python process/select_true.py data/train_medqa.json # Only for medqa, casehold and finfact
 
 # For mmrait, these steps should be done
 modelscope download --model Qwen/Qwen2.5-VL-32B-Instruct --local_dir saves/Qwen2.5-VL-32B-Instruct
@@ -153,7 +157,7 @@ Our training code supports the types of models, and here are some examples of th
 
 You need to modify the value of the fsdp_config parameter to correspond to different models. If you wish to select more different models, you can choose to use llamafactory to start training or modify the code in train/sft.py
 
-- Training using only text datasets (medqa, pubmed, pubhealth, casehold)
+- Training using only text datasets (medqa, pubmed, pubhealth, casehold, finfact)
 ```
 bash train/sft.sh
 ```
@@ -217,6 +221,29 @@ python eval/eval.py --file data/test_medqa.json --prediction_key llm_predict_rar
 ### Preliminary Experiment
 
 ### PEFT and DEFT
+
+1. PEFT
+
+In section 4.2, we explored the feasibility of using parameter-efficient fine-tuning with RARE as a replacement for full parameter fine-tuning. We found that using rank=64 or 128 could achieve good results. Thanks to LLaMA-Factory, we completed this exploration based on their project. Here, we provide examples of the training scripts we used, divided into a training script and a script for merging the LoRA adapter with the original model.
+
+- Integrating deepspeed and LLaMA-Factory to train using the RARE strategy
+
+```
+accelerate launch --config_file train/accelerate_config.yaml train/train.py train/training_args_lora.yaml
+```
+
+- Merging the trained LoRA Adapter with the original model for inference
+
+```
+llamafactory-cli export train/merge_lora.yaml
+```
+
+- These two commands can replace the commands marked with "# train" in demo/llama_pubmedqa_rare.sh to perform a complete trial
+
+2. DEFT
+
+In appendix A.2, we examined the data efficiency of the RARE strategy. This section does not require additional scripts; you only need to extract subsets from the training data obtained in the previous [Data Preparation](#Data-Preparation) step according to certain percentages. Then, following the example workflow in the demo, train the base model with different sized subsets, complete the inference and evaluation processes to verify data efficiency.
+
 
 ### Reinforcement Learning
 You first need to use `RL_KTO/process_kto.py` to process the data into the format required by KTO.

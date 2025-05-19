@@ -1,0 +1,12 @@
+### model
+model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
+adapter_name_or_path: saves/llama_pubmed_rare_lora_64 # The location where the training results are saved
+template: llama3
+finetuning_type: lora
+trust_remote_code: true
+
+### export
+export_dir: saves/llama_pubmed_rare_lora
+export_size: 2
+export_device: cpu
+export_legacy_format: false
