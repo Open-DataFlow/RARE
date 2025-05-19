@@ -11,7 +11,7 @@
 
 ## 💡 Overview
 
-We propose the **RARE** framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge. All progress will be openly shared and continuously updated in this repository!
+We propose the **RARE** framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge. *All progress will be openly shared and continuously updated in this repository!*
 
 <table class="center">
     <tr>
