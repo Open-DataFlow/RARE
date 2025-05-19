@@ -19,7 +19,7 @@ We propose the **RARE** framework, a novel paradigm that decouples knowledge sto
     </tr>
     <tr>
         <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
-              Performance of RARE versus baselines on benchmarks.
+              Performance of RARE versus baselines on benchmarks (medical, legal, financial, and more).
       </td>
     </tr>
 </table>
@@ -76,7 +76,7 @@ bash demo/llama_pubmedqa_rare.sh
 bash demo/qwenvl_mmrait_rare.sh
 ```
 
-## ✨ Preliminary Experiments
+## ✨ Main Experiments
 
 ### 📋 Data Preparation
 
@@ -212,13 +212,21 @@ The inference script extracts the keys to be evaluated through regular expressio
 python eval/eval.py --file data/test_medqa.json --prediction_key llm_predict_rare_llama
 ```
 
+## Analysis and Discussion
+
+### Preliminary Experiment
+
+### PEFT and DEFT
+
+### Reinforcement Learning
 
 ## ✏️ TODO List
-- [x] Static analysis as a preliminary experiment to demonstrate the effectiveness of RARE.
+- [x] A preliminary experiment to demonstrate the dynamics and effectiveness of RARE.
 - [x] More results on parameter-efficient fine-tuning and data-efficient fine-tuning.
-- [x] More results on multi-task and cross-task learning.
-- [ ] More results on diverse model sizes alongside relevant baselines.
-- [ ] Developing RARE 2.0 (Stay Tuned!)
+- [x] More results on reinforcement learning.
+- [ ] More results on multi-task and cross-task learning.
+- [ ] More results on diverse model sizes alongside the backbones.
+- [ ] Releasing RARE 2.0 (Stay Tuned!)
 
 
 ## 📖 Citation
