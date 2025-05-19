@@ -1,0 +1,59 @@
+{
+
+    "pubmed_kto":{
+      "file_name": "RL_KTO/data/train_pubmed_kto.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    },
+    "pubhealth_kto":{
+      "file_name": "RL_KTO/data/train_pubhealth_kto.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    },
+    "bioasq_kto":{
+      "file_name": "RL_KTO/data/train_bioasq_kto.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    },
+    "covert_kto":{
+      "file_name": "RL_KTO/data/train_covert_kto.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    },
+    "medqa_kto":{
+      "file_name": "RL_KTO/data/train_medqa_kto.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    },
+    "finfact_kto":{
+      "file_name": "RL_KTO/data/train_finfact.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    },
+    "casehold_kto":{
+      "file_name": "RL_KTO/data/train_casehold_kto.json",
+      "formatting": "sharegpt",
+      "columns": {
+        "messages": "conversations",
+        "kto_tag": "kto_tag"
+      }
+    }
+}

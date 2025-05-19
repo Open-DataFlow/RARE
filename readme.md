@@ -219,6 +219,15 @@ python eval/eval.py --file data/test_medqa.json --prediction_key llm_predict_rar
 ### PEFT and DEFT
 
 ### Reinforcement Learning
+You first need to use `RL_KTO/process_kto.py` to process the data into the format required by KTO.
+```
+# You can perform similar operations on all seven datasets.
+python RL_KTO/process_kto.py --input_path data/train_covert.json --output_path RL_KTO/data/train_covert_kto.json
+```
+Then you can use the following bash script to train KTO:
+```
+bash RL_KTO/train_kto.sh
+```
 
 ## ✏️ TODO List
 - [x] A preliminary experiment to demonstrate the dynamics and effectiveness of RARE.
