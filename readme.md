@@ -19,7 +19,7 @@ We propose the **RARE** framework, a novel paradigm that decouples knowledge sto
     </tr>
     <tr>
         <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
-              Performance of RARE versus baselines on benchmarks (medical, legal, financial, and more).
+              Performance of RARE versus baselines on diverse benchmarks (medical, legal, financial, and more).
       </td>
     </tr>
 </table>
