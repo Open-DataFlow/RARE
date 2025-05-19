@@ -11,7 +11,18 @@
 
 ## 💡 Overview
 
-We propose the **RARE** framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge. All progress will be openly shared and continuously updated in this repository.
+We propose the **RARE** framework, a novel paradigm that decouples knowledge storage from reasoning modeling. This framework accelerates reasoning modeling via bypassing rote memorization of lower-level knowledge. All progress will be openly shared and continuously updated in this repository!
+
+<table class="center">
+    <tr>
+        <td width=100% style="border: none"><img src="image/benchmark.png" style="width:100%"></td>
+    </tr>
+    <tr>
+        <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
+              Performance of RARE versus baselines on benchmarks.
+      </td>
+    </tr>
+</table>
 
 <table class="center">
     <tr>
@@ -26,23 +37,16 @@ We propose the **RARE** framework, a novel paradigm that decouples knowledge sto
 
 <table class="center">
     <tr>
-        <td width=100% style="border: none"><img src="image/figure2.png" style="width:100%"></td>
+        <td width=100% style="border: none"><img src="image/Case_Study.png" style="width:100%"></td>
     </tr>
     <tr>
         <td width="100%" style="border: none; text-align: center; word-wrap: break-word">
-              Demonstration of RARE. A real data sample, which showcases the effectiveness and superiority of RARE.
+              Demonstration of RARE with real medical case studies. Compared to RAG (only with domain knowledge), RARE (combining domain knowledge and thinking) enables LLMs to reason more deeply and accurately. RAG depends only on surface indicators, hastily concluding that the patient requires immediate glucose-lowering intervention, leading to an incorrect answer. In contrast, RARE integrates both clinical indicators and the effectiveness of prior treatment, carefully reasoning that the patient needs second-line therapy while providing a individualized treatment plan—ultimately arriving at the correct answer.
       </td>
     </tr>
 </table>
 
 <!-- ## 📣 Latest News -->
-
-## ✏️ TODO List
-- [ ] Static analysis as a preliminary experiment to demonstrate the effectiveness of RARE.
-- [ ] More results on parameter-efficient fine-tuning and data-efficient fine-tuning.
-- [ ] More results on diverse model sizes alongside relevant baselines.
-- [ ] More results on multi-task and cross-task learning.
-- [ ] Developing RARE 2.0 (Stay Tuned!)
 
 ## 🔧 Installation
 
@@ -208,15 +212,13 @@ The inference script extracts the keys to be evaluated through regular expressio
 python eval/eval.py --file data/test_medqa.json --prediction_key llm_predict_rare_llama
 ```
 
-<details>
 
-<summary> Expected Results </summary>
-
-<div align="center">
-  <img src="image/result.png" width="500" alt="result" style="display: block; margin: 0 auto;">
-</div>
-
-</details>
+## ✏️ TODO List
+- [x] Static analysis as a preliminary experiment to demonstrate the effectiveness of RARE.
+- [x] More results on parameter-efficient fine-tuning and data-efficient fine-tuning.
+- [x] More results on multi-task and cross-task learning.
+- [ ] More results on diverse model sizes alongside relevant baselines.
+- [ ] Developing RARE 2.0 (Stay Tuned!)
 
 
 ## 📖 Citation
