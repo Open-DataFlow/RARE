@@ -1,7 +1,7 @@
 <h1 align="center"> <img src="image/logo.png" width="38" height="38" alt="">  RARE: Retrieval-Augmented Reasoning Modeling </h1>
 
 <p align="center">
-<a href='https://arxiv.org/abs/2503.23513v1'><img src='https://img.shields.io/badge/arXiv-2503.23513-b31b1b.svg'></a>  
+<a href='https://arxiv.org/abs/2503.23513v2'><img src='https://img.shields.io/badge/arXiv-2503.23513-b31b1b.svg'></a>  
 <a href='https://huggingface.co/datasets/yuhkalhic/rare_share'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-rare-blue'></a>
 <a href="https://opensource.org/license/apache-2-0" target="_blank"><img alt="License: apache-2-0" src="https://img.shields.io/github/license/saltstack/salt"></a>
 <a href="https://github.com/Open-DataFlow/RARE" target="_blank"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Open-DataFlow/RARE?style=social"></a>
@@ -219,6 +219,41 @@ python eval/eval.py --file data/test_medqa.json --prediction_key llm_predict_rar
 ## Analysis and Discussion
 
 ### Preliminary Experiment
+1. Obtain Pre-experimental Data
+
+You first need to prepare the data required for the pre-experiment. The pre-experiment uses three datasets in total (PubHealth, CaseHOLD, FinFact), which need to be processed with different scripts.
+- pre-process pubhealth, casehold, finfact 
+```
+python Pre_Experiment/data/preprocess_pubhealth.py --input data/train_pubhealth.json --output Pre_Experiment/data/pre_pubhealth.json
+
+python Pre_Experiment/data/preprocess_casehold.py --input data/train_casehold.json --output Pre_Experiment/data/pre_casehold.json
+
+python Pre_Experiment/data/preprocess_finfact.py --input data/train_finfact.json --output Pre_Experiment/data/pre_finfact.json
+```
+2. Get Models Required
+
+Add special tokens to the model to better extract the loss values corresponding to these tokens.
+```
+python Pre_Experiment/customize_model.py --model_name_or_path meta-llama/Llama-3.1-8B-Instruct --output_dir Pre_Experiment/model
+```
+Download spaCy English small model (`en_core_web_sm`) for document key information extraction and text preprocessing
+```
+huggingface-cli download --resume-download spacy/en_core_web_sm --local-dir Pre_Experiment/model
+```
+3. Conduct Preliminary Experiments
+Then you can use the following bash script to conduct pre-experiments:
+```
+bash Pre_Experiment/pre_experiment.sh
+```
+Experiment results are saved in:  
+`Pre_Experiment/result/pre_experiment_{dataset_name}_{retrieval_ratio}_4.json`
+
+Where:
+- `{dataset_name}`: Name of dataset (e.g., `pubhealth`, `casehold`, `finfact`)
+- `{retrieval_ratio}`: Ratio used (0-4) from `--retrieval_ratio` parameter
+
+Example files:
+- `pre_experiment_pubhealth_1_4.json` (used 1/4 of retrieval content)
 
 ### PEFT and DEFT
 
