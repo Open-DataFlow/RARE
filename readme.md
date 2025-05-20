@@ -241,11 +241,18 @@ Download spaCy English small model (`en_core_web_sm`) for document key informati
 huggingface-cli download --resume-download spacy/en_core_web_sm --local-dir Pre_Experiment/model
 ```
 3. Conduct Preliminary Experiments
+
 Then you can use the following bash script to conduct pre-experiments:
 ```
 bash Pre_Experiment/pre_experiment.sh
 ```
-Experiment results are saved in:  
+
+<details>
+
+<summary> Experiment Results </summary>
+
+---------
+Experiment Results are saved in:  
 `Pre_Experiment/result/pre_experiment_{dataset_name}_{retrieval_ratio}_4.json`
 
 Where:
@@ -254,6 +261,11 @@ Where:
 
 Example files:
 - `pre_experiment_pubhealth_1_4.json` (used 1/4 of retrieval content)
+- `pre_experiment_casehold_4_4.json` (used full retrieval content)
+
+---------
+
+</details>
 
 ### PEFT and DEFT
 
