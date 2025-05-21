@@ -216,9 +216,9 @@ The inference script extracts the keys to be evaluated through regular expressio
 python eval/eval.py --file data/test_medqa.json --prediction_key llm_predict_rare_llama
 ```
 
-## Analysis and Discussion
+## 🧠 Analysis and Discussion
 
-### Preliminary Experiment
+### 🧪 Preliminary Experiment
 1. Obtain Pre-experimental Data
 
 You first need to prepare the data required for the pre-experiment. The pre-experiment uses three datasets in total (PubHealth, CaseHOLD, FinFact), which need to be processed with different scripts.
@@ -267,7 +267,7 @@ Example files:
 
 </details>
 
-### PEFT and DEFT
+### 🧩 PEFT and DEFT
 
 1. PEFT
 
@@ -292,7 +292,7 @@ llamafactory-cli export train/merge_lora.yaml
 In appendix A.2, we examined the data efficiency of the RARE strategy. This section does not require additional scripts; you only need to extract subsets from the training data obtained in the previous [Data Preparation](#Data-Preparation) step according to certain percentages. Then, following the example workflow in the demo, train the base model with different sized subsets, complete the inference and evaluation processes to verify data efficiency.
 
 
-### Reinforcement Learning
+### 🎯 Reinforcement Learning
 You first need to use `RL_KTO/process_kto.py` to process the data into the format required by KTO.
 ```
 # You can perform similar operations on all seven datasets.
