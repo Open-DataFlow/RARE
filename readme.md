@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href='https://arxiv.org/abs/2503.23513v2'><img src='https://img.shields.io/badge/arXiv-2503.23513-b31b1b.svg'></a>  
-<a href='https://huggingface.co/datasets/yuhkalhic/rare_share'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-rare-blue'></a>
+<a href='https://huggingface.co/datasets/RARE111/rare_share'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-rare-blue'></a>
 <a href="https://opensource.org/license/apache-2-0" target="_blank"><img alt="License: apache-2-0" src="https://img.shields.io/github/license/saltstack/salt"></a>
 <a href="https://github.com/Open-DataFlow/RARE" target="_blank"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Open-DataFlow/RARE?style=social"></a>
 </p>
