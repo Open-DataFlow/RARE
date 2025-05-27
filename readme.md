@@ -127,6 +127,9 @@ python scripts/vllm_infer_mm.py --model_name_or_path saves/Qwen2.5-VL-32B-Instru
 python process/select_true.py data/train_mmrait.json --mm
 ```
 
+> [!TIP]
+> To achieve better results, as described in our paper, we recommend using rejection sampling to improve the quality of distillation data. Use vllm_infer_text_reject_sampling.py instead of inference/vllm_infer_text.py for text data distillation, with exactly the same usage.
+
 After preprocessing, the data should include at least the following keys, where 'instruction', 'predict', 'id', and 'output' represent the prompt, the teaching model's thought process and answer, the data identification number, and the standard answer to the question, respectively.
 
 ```
@@ -161,6 +164,25 @@ You need to modify the value of the fsdp_config parameter to correspond to diffe
 ```
 bash train/sft.sh
 ```
+
+<details>
+
+<summary> 补充说明 </summary>
+
+---------
+
+Sometimes when using this training approach, inference outputs may exhibit repetitive sentence generation. Through our testing, we've found that this does not affect the final results, but it significantly increases inference time. If this issue occurs, we recommend using the following training approach:
+
+```
+accelerate launch --config_file train/accelerate_config.yaml train/train.py /mnt/public/code/wangzr/LLaMA-Factory/training_args_medqa.yaml
+```
+
+---------
+
+</details>
+
+
+
 
 - Training with multimodal datasets (mmrait)
 ```
