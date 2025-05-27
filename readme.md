@@ -174,7 +174,7 @@ bash train/sft.sh
 Sometimes when using this training approach, inference outputs may exhibit repetitive sentence generation. Through our testing, we've found that this does not affect the final results, but it significantly increases inference time. If this issue occurs, we recommend using the following training approach:
 
 ```
-accelerate launch --config_file train/accelerate_config.yaml train/train.py /mnt/public/code/wangzr/LLaMA-Factory/training_args_medqa.yaml
+accelerate launch --config_file train/accelerate_config.yaml train/train.py train/training_args.yaml
 ```
 
 ---------
