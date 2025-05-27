@@ -167,7 +167,7 @@ bash train/sft.sh
 
 <details>
 
-<summary> 补充说明 </summary>
+<summary> Additional Note </summary>
 
 ---------
 
